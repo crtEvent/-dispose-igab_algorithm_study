@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
-public class Boj_17298 {
+public class BOJ_17298 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
