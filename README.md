@@ -15,7 +15,9 @@ Java class 파일과 Markdown 파일을 기본으로 자유롭게 작성.
 
 ## ✅ commit 규칙
 - 리뷰의 편의성을 위해 문제 단위로 커밋한다.
-- commit 메세지: `[문제 출처(플랫폼)] gethub ID / 문제이름 / 난이도 / 걸린시간`
+- commit 메세지: `[문제 출처(플랫폼)] 문제이름 / 문제번호 / 난이도 / gethub ID`
+  - 예시 : `[BOJ] 스택 수열 / 1874 / 실버3`
+  - `문제번호`가 없는 경우는 생략한다.
 - description: 문제 주소 (option)
 - footer : `related to #(해당 주차 이슈 No.)`
 - 플랫폼 작성법 통일
