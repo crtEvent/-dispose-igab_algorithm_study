@@ -1,14 +1,14 @@
-package doit.ch04_정렬.p2750_수정렬하기_1;
+package doit.ch04_정렬.sec01_버블정렬.p2750_수정렬하기_1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main03_StreamSorted {
+public class Main04_ArraysSort {
 
-    // Array.stream의 sorted() 메소드로 정렬
-    // 192ms
+    // Arrays.sort() 로 정렬
+    // 176ms
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -20,7 +20,14 @@ public class Main03_StreamSorted {
             arr[i] = Integer.parseInt(br.readLine());
         }
 
-        Arrays.stream(arr).sorted().forEach(System.out::println);
+        // 정렬
+        Arrays.sort(arr);
+
+        // 출력
+        for(int i = 0; i < N; i++) {
+            System.out.println(arr[i]);
+        }
 
     }
+
 }

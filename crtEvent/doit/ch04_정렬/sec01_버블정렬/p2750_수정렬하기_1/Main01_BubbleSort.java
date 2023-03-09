@@ -1,4 +1,4 @@
-package doit.ch04_정렬.p2750_수정렬하기_1;
+package doit.ch04_정렬.sec01_버블정렬.p2750_수정렬하기_1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
