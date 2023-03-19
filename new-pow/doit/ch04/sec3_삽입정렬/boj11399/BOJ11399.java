@@ -1,4 +1,4 @@
-package doit.ch04.boj11399;
+package doit.ch04.sec3_삽입정렬.boj11399;
 
 import java.io.*;
 import java.util.*;

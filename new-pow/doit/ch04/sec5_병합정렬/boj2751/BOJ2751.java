@@ -1,9 +1,9 @@
-package doit.ch04.boj2751;
+package doit.ch04.sec5_병합정렬.boj2751;
 
 import java.util.*;
 import java.io.*;
 
-public class BOJ2751{
+public class BOJ2751 {
 
     static int[] sorted;
 
@@ -36,14 +36,13 @@ public class BOJ2751{
         int j =middle+1; // 배열 나눠지는 지점부터 첫번째 요소
         int k =m;
 
+
         // 작은 순서대로 배열에 삽입
-        while (i<=middle && j<=n) {
+        while (i <= middle && j <= n) {
             if (a[i] <= a[j]) {
-                sorted[k] = a[i];
-                i++;
+                sorted[k] = a[i++];
             } else {
-                sorted[k] = a[j];
-                j++;
+                sorted[k] = a[j++];
             }
             k++;
         }
@@ -73,7 +72,7 @@ public class BOJ2751{
             mergeSort(a, m, middle);
             mergeSort(a, middle+1, n);
 
-            merge(a, m, middle, n);    // 나중에 정렬하면서 합치기
+            merge(a, m, middle, n);    // 나중에 합치기
         }
     }
 

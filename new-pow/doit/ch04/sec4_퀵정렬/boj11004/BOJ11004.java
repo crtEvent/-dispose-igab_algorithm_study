@@ -4,8 +4,8 @@ import java.io.*;
 import java.util.*;
 
 public class BOJ11004 {
+    static int[] arr;
 
-    // 시간초과
     public static void main(String[] args) throws Exception {
         // 입력
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -16,7 +16,7 @@ public class BOJ11004 {
         int n = Integer.parseInt(st.nextToken());
         int k = Integer.parseInt(st.nextToken());
 
-        int[] arr = new int[n];
+        arr = new int[n];
         st = new StringTokenizer(br.readLine());
 
         for (int i=0; i<n; i++) {
@@ -24,38 +24,39 @@ public class BOJ11004 {
         }
 
         // 정렬
-        quickSort(arr, 0, n-1);
+        quickSort(0, n-1);
 
-        bw.write(arr[k-1]);
+        bw.write(String.valueOf(arr[k-1]));
         bw.flush();
         bw.close();
     }
 
-    private static void quickSort(int[] arr, int start, int end) {
+    private static void quickSort(int start, int end) {
         // 1. pivot 설정. 오른쪽 끝
-        int pivot = arr[end];
-
+        int pivot = arr[(start+end)/2];
         int i = start;
-        int j = end-1;
+        int j = end;
 
-        while(true) {
-            while (arr[i] <= pivot) {
+        while(i <= j) {
+            while (arr[i] < pivot) {
                 i++;
             }
             while (arr[j] > pivot) {
                 j--;
             }
-            swap(arr, i, j);
-            if (i > j) break;
+            if (i <= j) {
+                swap(i, j);
+                i++; j--;
+            }
         }
 
-        swap(arr, end, i);
+        swap((start+end)/2, i);
 
-        quickSort(arr, start, i-1);
-        quickSort(arr, i+1, end);
+        if (start < j) quickSort(start, j);
+        if (end > i) quickSort(i, end);
     }
 
-    private static void swap(int[] arr, int a, int b) {
+    private static void swap(int a, int b) {
         int tmp = arr[a];
         arr[a] = arr[b];
         arr[b] = tmp;
