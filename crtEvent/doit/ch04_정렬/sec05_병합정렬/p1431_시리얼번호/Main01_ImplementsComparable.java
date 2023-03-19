@@ -36,6 +36,10 @@ public class Main01_ImplementsComparable {
             return sum;
         }
 
+        public String getSerialNumber() {
+            return serialNumber;
+        }
+
         public String toString() {
             return serialNumber;
         }
@@ -53,7 +57,7 @@ public class Main01_ImplementsComparable {
 
             // 사전순으로 비교한다. 숫자가 알파벳보다 사전순으로 작다.
             if(compare == 0) {
-                compare = this.compareTo(o);
+                compare = this.getSerialNumber().compareTo(o.getSerialNumber());
             }
             return compare;
         }
