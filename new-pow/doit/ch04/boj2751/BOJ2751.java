@@ -73,7 +73,7 @@ public class BOJ2751{
             mergeSort(a, m, middle);
             mergeSort(a, middle+1, n);
 
-            merge(a, m, middle, n);    // 나중에 합치기
+            merge(a, m, middle, n);    // 나중에 정렬하면서 합치기
         }
     }
 
