@@ -1,6 +1,4 @@
-package doit.ch04.week3_정렬추가문제;
-
-import com.sun.tools.javac.Main;
+package doit.ch04.sec5_병합정렬.boj1431;
 
 import java.io.*;
 import java.util.*;
